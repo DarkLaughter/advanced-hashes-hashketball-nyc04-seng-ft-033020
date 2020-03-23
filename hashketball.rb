@@ -173,10 +173,11 @@ def players_stats(name)
   game_hash.each do |loc, teams|
     teams[:players].each do |player|
 
-        player.reject {|n| n == name}
-        player 
+        if player[:player_name] == name
+            player.each {|key, value| stats << :key = value}
+        end
       end
     end
 
-    stats
+    stats.reject {|key| key = :player_name}
 end
