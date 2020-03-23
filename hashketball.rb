@@ -179,5 +179,5 @@ def players_stats(name)
       end
     end
 
-    stats.reject
+    stats
 end
