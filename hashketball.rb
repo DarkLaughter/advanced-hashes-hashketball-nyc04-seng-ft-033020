@@ -198,6 +198,6 @@ def biggest_shoe_size
 end
 
 def big_shoe_rebounds
-
-show
+  shoe_size = biggest_shoe_size
+  puts shoe_size
 end
