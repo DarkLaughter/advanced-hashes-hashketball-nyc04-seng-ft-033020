@@ -184,19 +184,6 @@ def player_stats(name)
 end
 
 
-def biggest_shoe_size(data)
-  biggest = 0
-
-    data.each do |loc, teams|
-      teams[:players].each do |player|
-        if player[:shoe_size] > biggest
-          biggest = player[:shoe_size]
-      end
-    end
-
-  biggest
-end
-
 def biggest_shoe_size
   biggest = 0
 
