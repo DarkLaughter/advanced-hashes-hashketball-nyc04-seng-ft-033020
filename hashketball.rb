@@ -179,5 +179,5 @@ def player_stats(name)
       end
     end
 
-    stats.reject {|x| x == "player_name " }
+    stats.delete {|x,y| player[:player_name] == name}
 end
