@@ -179,5 +179,5 @@ def players_stats(name)
       end
     end
 
-    stats.slice(1)
+    stats
 end
