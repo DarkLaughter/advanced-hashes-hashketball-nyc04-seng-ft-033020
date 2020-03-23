@@ -199,17 +199,5 @@ end
 
 def big_shoe_rebounds
 
-show 
+show
 end
-
-
-
-
-
-
-
-
-
-
-
-
