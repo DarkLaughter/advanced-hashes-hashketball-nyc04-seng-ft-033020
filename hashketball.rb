@@ -203,7 +203,7 @@ def big_shoe_rebounds
     game_hash.each do |loc, teams|
       teams[:players].each do |player|
         if player[:shoe] == shoe_size
-          return player[:player_name]
+          return player[:rebounds]
         end
       end
     end
