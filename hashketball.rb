@@ -179,5 +179,5 @@ def player_stats(name)
       end
     end
 
-    stats.delete {|x,y| player[:player_name] == name}
+    stats
 end
