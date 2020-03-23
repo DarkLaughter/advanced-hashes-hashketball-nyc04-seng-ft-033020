@@ -169,7 +169,7 @@ def player_numbers(team_name)
 end
 
 def players_stats(name)
-  stats = []
+  stats = {}
   game_hash.each do |loc, teams|
     teams[:players].each do |player|
 
@@ -179,5 +179,5 @@ def players_stats(name)
       end
     end
 
-    stats.reject 
+    stats.reject
 end
