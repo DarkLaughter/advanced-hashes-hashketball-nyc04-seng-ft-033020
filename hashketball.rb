@@ -179,5 +179,5 @@ def players_stats(name)
       end
     end
 
-    stats.reject {|key| key = :player_name}
+    stats.reject 
 end
