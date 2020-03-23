@@ -114,16 +114,70 @@ def game_hash
 end
 
 def num_points_scored(name)
-  game_hash
-
   game_hash.each do |loc, teams|
-    teams.each do |keys, value|
+    teams[:players].each do |player|
 
-        if game_hash[value].include? (name)
-          return [value][:points]
+        if player[:player_name] == name
+        return player[:points]
         end
       end
     end
-  end
 
+end
+
+def shoe_size(name)
+  game_hash.each do |loc, teams|
+    teams[:players].each do |player|
+
+        if player[:player_name] == name
+        return player[:shoe]
+        end
+      end
+    end
+
+end
+
+def team_colors (team_name)
+  game_hash.each do |loc, teams|
+    if teams[:team_name] == team_name
+      return teams[:colors]
+    end
+  end
+end
+
+def team_names
+  names = []
+  game_hash.each do |loc, teams|
+    names<< teams[:team_name]
+
+  end
+  names
+end
+
+def player_numbers(team_name)
+ jersey_nums = []
+
+    game_hash.each do |loc, teams|
+      if teams[:team_name] == team_name
+
+          teams[:players].each do |player|
+            jersey_nums << player[:number]
+          end
+      end
+    end
+  jersey_nums
+end
+
+def players_stats(name)
+  stats = []
+  game_hash.each do |loc, teams|
+    teams[:players].each do |player|
+
+        if player[:player_name] == name
+            player.each {|key, value| stats << :key = value}
+        end
+      end
+    end
+
+    stats.slice(1)
 end
