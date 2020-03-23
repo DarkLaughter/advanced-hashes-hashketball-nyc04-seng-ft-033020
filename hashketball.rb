@@ -183,6 +183,33 @@ def player_stats(name)
     stats
 end
 
+
+def biggest_shoe_size(data)
+  biggest = 0
+
+    data.each do |loc, teams|
+      teams[:players].each do |player|
+        if player[:shoe_size] > biggest
+          biggest = player[:shoe_size]
+      end
+    end
+
+  biggest
+end
+
+def biggest_shoe_size
+  biggest = 0
+
+    game_hash.each do |loc, teams|
+      teams[:players].each do |player|
+        if player[:shoe] > biggest
+          biggest = player[:shoe]
+        end
+    end
+  end
+ puts  biggest
+end
+
 def big_shoe_rebounds
 
 end
