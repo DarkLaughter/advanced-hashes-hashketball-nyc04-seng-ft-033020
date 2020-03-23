@@ -179,5 +179,5 @@ def player_stats(name)
       end
     end
 
-    stats.reject {|x, y|  }
+    stats.reject {|x| x == "player_name " }
 end
