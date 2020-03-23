@@ -174,7 +174,7 @@ def players_stats(name)
     teams[:players].each do |player|
 
         player.reject {|n| n == name}
-        end
+        
       end
     end
 
