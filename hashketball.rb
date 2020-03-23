@@ -174,7 +174,7 @@ def player_stats(name)
     teams[:players].each do |player|
 
         if player[:player_name] == name
-            player.each {|key, value| stats[key] = value}
+            player.each {|key| stats << n[1]}
         end
       end
     end
