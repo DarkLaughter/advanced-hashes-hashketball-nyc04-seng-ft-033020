@@ -175,6 +175,7 @@ def player_stats(name)
 
         if player[:player_name] == name
             player.each {|key, value| stats[key] = value}
+            stats.delete(:player_name)
         end
       end
     end
